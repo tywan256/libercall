@@ -30,22 +30,31 @@
             </ul>
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                  <form id="videoform">
+                  <form id="videoform" method="POST" action="{{ route('uploadadvert') }}" enctype="multipart/form-data">
+
+                    {{ csrf_field() }}
+
+                          @if (Session::has('success'))
+                          <div class="alert alert-success">
+                              <p>{{ Session::get('success') }}</p>
+                          </div>
+                          @endif
                       <div class="form-group">
                         <label for="exampleInputEmail1">Advert Title</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter advert name">
+                        <input type="text" class="form-control" name="advert_title" aria-describedby="emailHelp" placeholder="Enter advert name">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword1">Description</label>
-                        <textarea class="form-control" id="exampleInputPassword1" placeholder="Enter brief description"></textarea>
+                        <textarea class="form-control" name="description" placeholder="Enter brief description"></textarea>
                       </div>
                       <div class="form-group">
                         <label for="exampleFormControlFile1">Choose video from your disk</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <input type="file" class="form-control-file" name="advert">
                       </div>
                       <button type="submit" class="btn btn-success">Submit</button>
                     </form>
               </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
             </div>
       </div>
     </div>
