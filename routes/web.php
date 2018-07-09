@@ -27,3 +27,5 @@ Route::post('credituser', 'HomeController@credituser')->name('credituser');
 Route::get('register', 'RegistrationController@index')->name('register');
 Route::post('requestcode', 'RegistrationController@requestcode')->name('requestcode');
 Route::post('updateuser', 'RegistrationController@updateuser')->name('updateuser');
+Route::get('/upload', 'UploadController@index');
+Route::get('/dashboard', 'DashboardController@index');

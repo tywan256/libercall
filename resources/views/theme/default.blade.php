@@ -27,6 +27,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <link rel="stylesheet" href="{!! asset('theme/css/owl-carousel/owl.carousel.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/owl-carousel/owl.theme.default.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/style.css') !!}">
+    <link rel="stylesheet" href="{!! asset('theme/css/custom.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/modalcss.css') !!}">
   </head>
 
