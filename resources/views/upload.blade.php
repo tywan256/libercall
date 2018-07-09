@@ -6,14 +6,14 @@
         <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="{{ asset('theme/img/avatar-1.jpg')}}" alt="My Photo" class="img-fluid rounded-circle"></div>
             <div class="title">
-                <h1 class="h4">Steena Ben</h1>
+                <h1 class="h4">{{ Auth::user()->name }}</h1>
             </div>
         </div>
         <hr>
         <!-- Sidebar Navidation Menus-->
         <ul class="list-unstyled">    
-            <li> <a href="advertiser.html"> <i class="fa fa-bar-chart"></i>Statistics </a></li>
-            <li class="active"> <a href="upload.html"> <i class="fa fa-upload"></i>Upload video/audio </a></li>
+            <li> <a href="{{ url('/dashboard') }}"> <i class="fa fa-bar-chart"></i>Statistics </a></li>
+            <li class="active"> <a href="{{ url('/upload') }}"> <i class="fa fa-upload"></i>Upload video/audio </a></li>
         </ul>
     </nav>
     
@@ -32,21 +32,20 @@
               <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <form id="videoform">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Advert Name</label>
+                        <label for="exampleInputEmail1">Advert Title</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter advert name">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Company Name</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Company name">
+                        <label for="exampleInputPassword1">Description</label>
+                        <textarea class="form-control" id="exampleInputPassword1" placeholder="Enter brief description"></textarea>
                       </div>
                       <div class="form-group">
                         <label for="exampleFormControlFile1">Choose video from your disk</label>
                         <input type="file" class="form-control-file" id="exampleFormControlFile1">
                       </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-success">Submit</button>
                     </form>
               </div>
-              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
             </div>
       </div>
     </div>

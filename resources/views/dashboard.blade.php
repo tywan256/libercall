@@ -6,14 +6,14 @@
         <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="{{ asset('theme/img/avatar-1.jpg')}}" alt="My Photo" class="img-fluid rounded-circle"></div>
             <div class="title">
-                <h1 class="h4">Steena Ben</h1>
+                <h1 class="h4">{{ Auth::user()->name }}</h1>
             </div>
         </div>
         <hr>
         <!-- Sidebar Navidation Menus-->
         <ul class="list-unstyled">    
-            <li class="active"> <a href="advertiser.html"> <i class="fa fa-bar-chart"></i>Statistics </a></li>
-            <li> <a href="upload.html"> <i class="fa fa-upload"></i>Upload video/audio </a></li>
+            <li class="active"> <a href="{{ url('/dashboard') }}"> <i class="fa fa-bar-chart"></i>Statistics </a></li>
+            <li> <a href="{{ url('/upload') }}"> <i class="fa fa-upload"></i>Upload video/audio </a></li>
         </ul>
     </nav>
 
