@@ -9,7 +9,10 @@
 <section id="login" class="bg-parallax contact-h-bg">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 pull-center">
+        <div class="col-md-3">
+        
+        </div>
+      <div class="col-md-6">
         <div class="contact-h-cont">
           <h3 class="cl-white">I already have an account</h3><br>
 
@@ -26,9 +29,9 @@
                 <label for="name" class="cols-sm-2 control-label">Mobile</label>
                 <div class="cols-sm-10">
                   <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                    <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span> 
 
-                    <input id="mobile" type="mobile" class="form-control{{ $errors->has('mobile') ? ' is-invalid' : '' }}" name="mobile" value="{{ old('mobile') }}" autofocus>
+                    <input id="mobile" type="mobile" class="form-control {{ $errors->has('mobile') ? ' is-invalid' : '' }}" name="mobile" value="{{ old('mobile') }}" autofocus>
 
                                 @if ($errors->has('mobile'))
                                     <span class="invalid-feedback" role="alert">
@@ -39,12 +42,29 @@
                   </div>
                 </div>
               </div>
-
               <div class="form-group">
-                <label for="password" class="cols-sm-2 control-label">Password</label>
-                <!-- <div class="cols-sm-10"> -->
+                <label for="name" class="cols-sm-2 control-label">Password</label>
+                <div class="cols-sm-10">
                   <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                    <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span> 
+
+                    <input id="password" type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" autofocus>
+
+                                @if ($errors->has('password'))
+                                    <div class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </div>
+                                @endif
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="form-group">
+                <label for="password" class="cols-sm-2 control-label">Password</label>
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span> 
                     
                     <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
 
@@ -55,8 +75,8 @@
                                 @endif
 
                   </div>
-                <!-- </div> -->
-              </div>
+                </div> 
+              </div> -->
 
               <div class="form-group">
                 
@@ -74,7 +94,7 @@
 
               <div class="form-group">
                 
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-success">
                                     {{ __('Login') }}
                                 </button>
 
@@ -86,6 +106,9 @@
                 
             </form>
         </div>
+      </div>
+      <div class="col-md-3">
+        
       </div>
     </div>
   </div>         

@@ -27,9 +27,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <link rel="stylesheet" href="{!! asset('theme/css/owl-carousel/owl.carousel.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/owl-carousel/owl.theme.default.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/style.css') !!}">
-    <link rel="stylesheet" href="{!! asset('theme/css/custom.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/faq.css') !!}">
-    <link rel="stylesheet" href="{!! asset('theme/css/modalcss.css') !!}">
   </head>
 
   <body id="page-top">
@@ -57,10 +55,22 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <script src="{!! asset('theme/js/bootstrap/bootstrap.min.js') !!}"></script>
     <script src="{!! asset('theme/js/wow/wow.min.js') !!}"></script>
     <script src="{!! asset('theme/js/owl-carousel/owl.carousel.min.js') !!}"></script>
+    <script>
+        if( jQuery(".toggle .toggle-title").hasClass('active') ){
+                jQuery(".toggle .toggle-title.active").closest('.toggle').find('.toggle-inner').show();
+            }
+            jQuery(".toggle .toggle-title").click(function(){
+                if( jQuery(this).hasClass('active') ){
+                    jQuery(this).removeClass("active").closest('.toggle').find('.toggle-inner').slideUp(200);
+                }
+                else{   jQuery(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
+                }
+            });
+    </script> 
 
     <!-- Plugin JavaScript -->
     <script src="{!! asset('theme/js/jquery-easing/jquery.easing.min.js') !!}"></script><script src="{!! asset('theme/js/main.js') !!}"></script>
-    <!-- <script src="{!! asset('theme/js/custom.js') !!}"></script>  -->
+    <script src="{!! asset('theme/js/custom.js') !!}"></script>  
   </body>
 
 </html>

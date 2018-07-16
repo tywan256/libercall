@@ -30,3 +30,4 @@ Route::post('updateuser', 'RegistrationController@updateuser')->name('updateuser
 Route::get('/upload', 'UploadController@index')->name('upload');
 Route::get('/dashboard', 'DashboardController@index');
 Route::post('uploadadvert', 'UploadController@uploadadvert')->name('uploadadvert');
+Route::get('faq', 'FaqController@index')->name('faq');

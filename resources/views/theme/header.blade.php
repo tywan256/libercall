@@ -18,7 +18,7 @@
                 <!-- li class="nav-item" ><a class="nav-link smooth-scroll" href="myaccount.html">My Account</a></li -->
                 
                         @guest
-                            <li class="nav-item" ><a class="nav-link smooth-scroll" href="http://127.0.0.1:8000/">Help</a></li> 
+                            <li class="nav-item" ><a class="nav-link smooth-scroll" href="{{ route('faq') }}">Help</a></li> 
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -29,7 +29,7 @@
                             <li class="nav-item active" ><a class="nav-link smooth-scroll" href="{{ route('home') }}">Dashboard</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->mobile }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -544,6 +544,13 @@ p {
         font-weight: 400;
     }
 
+    .btn-link{
+        color: #fff;
+    }
+    .btn-link:hover{
+        color:#fff;
+    }
+
     .btn-white {
         border-color: #fff;
         background-color: #66d341;

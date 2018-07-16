@@ -70,6 +70,9 @@
 <section id="getinvite" class="bg-parallax contact-h-bg">
   <div class="container">
     <div class="row">
+      <div class="col-md-3">
+        
+      </div>
       <div class="col-md-6">
         <div class="contact-h-cont">
           <h3 class="cl-white">Request Invite Code</h3><br>
@@ -132,9 +135,12 @@
                                 @endif
 
               </div>   
-            <input type="submit" class="btn btn-general btn-white" value="Get Invite Code">
+            <input type="submit" class="btn btn-success btn-white" value="Get Invite Code">
           </form>
         </div>
+      </div>
+      <div class="col-md-3">
+        
       </div>
     </div>
   </div>         
