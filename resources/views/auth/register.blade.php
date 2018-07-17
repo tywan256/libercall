@@ -9,7 +9,9 @@
 <section id="getinvite" class="bg-parallax contact-h-bg">
   <div class="container">
     <div class="row">
-      
+      <div class="col-md-3">
+
+      </div>
       <div class="col-md-6">
           <div class="contact-h-cont">
             <h3 class="cl-white">Register new account</h3><br>
@@ -99,7 +101,7 @@
                   <label for="password" class="cols-sm-2 control-label">Password</label>
                   <div class="cols-sm-10">
                     <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                      <span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
                       
                         <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" >
 
@@ -117,7 +119,7 @@
                   <label for="confirm_password" class="cols-sm-2 control-label">Confirm Password</label>
                   <div class="cols-sm-10">
                     <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                      <span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
                       
                         <input id="password-confirm" type="password" class="form-control{{ $errors->has('confirm_password') ? ' is-invalid' : '' }}" name="confirm_password">
 
@@ -133,13 +135,16 @@
   
                 <div class="form-group ">
                   
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-success">
                                     {{ __('Register') }}
                                 </button>
 
                 </div> 
               </form>
           </div>
+      </div>
+      <div class="col-md-3">
+        
       </div>
     </div>
   </div>         
