@@ -1,65 +1,95 @@
-@extends('layouts.app')
+@extends('theme.default')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('password.request') }}" aria-label="{{ __('Reset Password') }}">
-                        @csrf
+<!--====================================================
+                        PAGE CONTENT
+======================================================--> 
+<div class="overlay-contact-h"></div>
+<section id="login" class="bg-parallax contact-h-bg">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        
+        </div>
+      <div class="col-md-6">
+        <div class="contact-h-cont">
+          <h3 class="cl-white">{{ __('Reset Password') }}</h3><br>
 
-                        <input type="hidden" name="token" value="{{ $token }}">
+          <form method="POST" action="{{ route('password.request') }}" aria-label="{{ __('Reset Password') }}">
+                        {{ csrf_field() }}
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                        @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                        @endif
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
+              <div class="form-group">
+                <label for="email" class="cols-sm-2 control-label">{{ __('E-Mail Address') }}</label>
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-evelope" aria-hidden="true"></i></span> 
+
+                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                  </div>
+                </div>
+              </div>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+              <div class="form-group">
+                <label for="password" class="cols-sm-2 control-label">{{ __('Password') }}</label>
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa lock" aria-hidden="true"></i></span> 
+
+                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                  </div>
+                </div>
+              </div>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+              <div class="form-group">
+                <label for="password-confirm" class="cols-sm-2 control-label">{{ __('Confirm Password') }}</label>
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span> 
+
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                
+                    <button type="submit" class="btn btn-success">
                                     {{ __('Reset Password') }}
                                 </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+              </div>
+                
+            </form>
         </div>
+      </div>
+      <div class="col-md-3">
+        
+      </div>
     </div>
-</div>
+  </div>         
+</section>
+
 @endsection

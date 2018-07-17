@@ -69,7 +69,8 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     </script> 
 
     <!-- Plugin JavaScript -->
-    <script src="{!! asset('theme/js/jquery-easing/jquery.easing.min.js') !!}"></script><script src="{!! asset('theme/js/main.js') !!}"></script>
+    <script src="{!! asset('theme/js/jquery-easing/jquery.easing.min.js') !!}"></script>
+    <script src="{!! asset('theme/js/main.js') !!}"></script>
     <script src="{!! asset('theme/js/custom.js') !!}"></script>  
   </body>
 

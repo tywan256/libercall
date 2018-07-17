@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <video class="video" id="video">
-                    <source src="{{ asset('storage/(6) YOU AND ME BY LYDIA JAZMINE & DADDY ANDRE (OFFICIAL VIDEO) - YouTube.MVK') }}" type="video/mp4"/>
+                    <source src="{{ asset('storage/video1.mp4') }}" type="video/mp4"/>
                 </video> 
                 <div class="playpause"></div>
             </div>
@@ -98,7 +98,7 @@
 
     {{ csrf_field() }}
 
-    <div class="container">
+    <div class="container-modal">
 
       <label for="uname"><b>You have 2mins of Calling. Dial *196*6*0788973633#</b></label>
       <input type="hidden" value="{{ Auth::user()->mobile }}"  name="mobile">

@@ -22,6 +22,7 @@ Route::get('welcome', function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/welcome', 'HomeController@welcome')->name('welcome');
 Route::post('credituser', 'HomeController@credituser')->name('credituser');
 
 Route::get('register', 'RegistrationController@index')->name('register');

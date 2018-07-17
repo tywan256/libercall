@@ -27,7 +27,6 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <link rel="stylesheet" href="{!! asset('theme/css/owl-carousel/owl.carousel.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/owl-carousel/owl.theme.default.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/style.css') !!}">
-    <link rel="stylesheet" href="{!! asset('theme/css/custom.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/faq.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/modalcss.css') !!}">
   </head>
@@ -59,8 +58,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <script src="{!! asset('theme/js/owl-carousel/owl.carousel.min.js') !!}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="{!! asset('theme/js/jquery-easing/jquery.easing.min.js') !!}"></script><script src="{!! asset('theme/js/main.js') !!}"></script>
-    <!-- <script src="{!! asset('theme/js/custom.js') !!}"></script>  -->
+    <script src="{!! asset('theme/js/jquery-easing/jquery.easing.min.js') !!}"></script>
+    <script src="{!! asset('theme/js/main.js') !!}"></script>
+    <script src="{!! asset('theme/js/custom.js') !!}"></script>  
   </body>
 
 </html>
