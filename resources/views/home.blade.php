@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <video class="video" id="video">
-                    <source src="{{ asset('storage/video1.MP4') }}" type="video/mp4"/>
+                    <source src="{{ asset('storage/video1.mp4') }}" type="video/mp4"/>
                 </video> 
                 <div class="playpause"></div>
             </div>
