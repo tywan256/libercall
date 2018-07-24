@@ -5,19 +5,19 @@
 <!--====================================================
                        HOME-P
 ======================================================-->
-<div class="col-lg-12">
+<div>
         <div id="card1" class="card">
             <div class="card-body">
                 <h3 style="text-align: center;">Watch video to get your free credit</h3>
             </div>
         </div>
     </div>
-<div class="container-fluid">
+<div class="container">
     <div class="page-header">
         <div class="row">
             <div class="col-lg-7">
                 <video class="video" id="video">
-                    <source src="{{ asset('storage/video1.mp4') }}" type="video/mp4"/>
+                    <source src="{{ asset('storage/video1.MP4') }}" type="video/mp4"/>
                 </video> 
                 <div class="playpause"></div>
             </div>

@@ -29,6 +29,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <link rel="stylesheet" href="{!! asset('theme/css/style.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/faq.css') !!}">
     <link rel="stylesheet" href="{!! asset('theme/css/modalcss.css') !!}">
+    <link rel="stylesheet" href="{!! asset('theme/css/custom.css') !!}">
   </head>
 
   <body id="page-top">

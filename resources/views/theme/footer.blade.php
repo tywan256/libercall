@@ -9,8 +9,8 @@
                   <ul class="list-unstyled link-list">
                     <li><a href="">Features</a><i class="fa fa-angle-right"></i></li>
                     <li><a href="">Coverage</a><i class="fa fa-angle-right"></i></li>
-                    <li><a href="">Help</a><i class="fa fa-angle-right"></i></li>
-                    <li><a href="">FAQs</a><i class="fa fa-angle-right"></i></li>
+                    <!-- <li><a href="">Help</a><i class="fa fa-angle-right"></i></li> -->
+                    <li><a href="{{ route('faq') }}">FAQs</a><i class="fa fa-angle-right"></i></li>
                     <li><a href="">Contact Us</a><i class="fa fa-angle-right"></i></li>
                   </ul>
                 </div>
