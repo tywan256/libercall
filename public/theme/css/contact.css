@@ -37,6 +37,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     #contact-p2 .sub-but {
       margin: 0;
       text-align: center;
+      margin-bottom: 50px;
     }
 
     .con-form input {

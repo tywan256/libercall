@@ -7,11 +7,11 @@
                 <div class="col-md-3 col-sm-6 ">
                   <div class="heading-footer"><h2>Liber Call</h2></div>
                   <ul class="list-unstyled link-list">
-                    <li><a href="">Features</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="{{ route('welcome') }}">Features</a><i class="fa fa-angle-right"></i></li>
                     <li><a href="">Coverage</a><i class="fa fa-angle-right"></i></li>
                     <!-- <li><a href="">Help</a><i class="fa fa-angle-right"></i></li> -->
                     <li><a href="{{ route('faq') }}">FAQs</a><i class="fa fa-angle-right"></i></li>
-                    <li><a href="">Contact Us</a><i class="fa fa-angle-right"></i></li>
+                    <li><a href="{{ route('contact') }}">Contact Us</a><i class="fa fa-angle-right"></i></li>
                   </ul>
                 </div>
                 <!-- End Recent list -->
