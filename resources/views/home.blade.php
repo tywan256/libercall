@@ -16,9 +16,14 @@
     <div class="page-header">
         <div class="row">
             <div class="col-lg-7">
-                <video class="video" id="video">
-                    <source src="{{ asset('storage/video1.MP4') }}" type="video/mp4"/>
-                </video> 
+               
+                    <video class="video" id="video" >
+                    
+                    </video>
+
+<!--                 <video class="video" id="video" >
+                    <source src="changeSource({{ asset('storage/video1.MP4') }});" type="video/mp4"/>
+                </video> --> 
                 <div class="playpause"></div>
             </div>
             <div class="col-lg-1">
@@ -94,8 +99,8 @@
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" method="POST" action="{{ route('credituser') }}">
-
+ <!--  <form class="modal-content animate" method="POST" action="{{ route('credituser') }}"> -->
+  <form class="modal-content animate">
     {{ csrf_field() }}
 
     <div class="container-modal">

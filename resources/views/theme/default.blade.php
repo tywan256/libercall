@@ -14,6 +14,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="csrf_field()" />
 
     <title>Liber Call</title>
     <!--link rel="shortcut icon" href="img/favicon1.ico"-->
