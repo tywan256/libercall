@@ -135,7 +135,7 @@
                                 @endif
 
               </div>   
-            <input type="submit" class="btn btn-success btn-white" value="Get Invite Code">
+            <input type="submit" class="btn btn-success" value="Get Invite Code">
           </form>
         </div>
       </div>

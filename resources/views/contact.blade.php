@@ -61,7 +61,9 @@
               <input type="text" name="subject" placeholder="Subject" class="form-control">
             </div>
             <div class="col-md-12"><textarea name="" id=""></textarea></div>
-            <div class="col-md-12 sub-but"><button class="btn btn-success" role="button">Send</button></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4 sub-but"><button class="btn btn-success" role="button">Send</button></div>
+            <div class="col-md-4"></div>
           </div>
       </div>
     </service>
