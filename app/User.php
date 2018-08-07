@@ -16,7 +16,7 @@ class User extends Authenticatable
      */
     
     protected $fillable = [
-        'gender', 'dateofbirth', 'country', 'mobile','name', 'email','invitationcode','password', 'credit'
+        'gender', 'dateofbirth', 'country', 'mobile','name', 'email','invitationcode','password', 'credit','roleid'
     ];
 
     /**
@@ -27,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function role(){
+        return $this->hasOne('App\Role');
+    }
+
+    public function advert(){
+        return $this->hasMany('App\Advert','email','email');
+    }
 }

@@ -6,7 +6,8 @@
         <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="{{ asset('theme/img/avatar-1.jpg')}}" alt="My Photo" class="img-fluid rounded-circle"></div>
             <div class="title">
-                <h1 class="h4">{{ Auth::user()->name }}</h1>
+                <h1 class="h4">{{ Auth::user()->name }}</h1><br>
+                <h2> </h2>
             </div>
         </div>
         <hr>
@@ -54,7 +55,34 @@
                       <button type="submit" class="btn btn-success">Submit</button>
                     </form>
               </div>
-              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                      <table id="datatable11" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>TITLE</th>
+                                <th>DESCRIPTION</th>
+                                <th>ADVERT</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>TITLE</th>
+                                <th>DESCRIPTION</th>
+                                <th>ADVERT</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                        <!-- {{$adverts}} -->
+                            @foreach($adverts as $advert)
+                              <tr >
+                                <td>{{$advert->advert_title}}</td>
+                                <td>{{$advert->description}}</td>
+                                <td>{{$advert->advert}}</td>
+                              </tr>
+                            @endforeach
+                        </tbody>
+                      </table>
+              </div>
             </div>
       </div>
     </div>

@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Advert;
+use App\User;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 
 class UploadController extends Controller
 {
@@ -17,6 +19,8 @@ class UploadController extends Controller
 
     public function uploadadvert(Request $request)
     {	
+        $user = Auth::user();
+
     	$this->validate($request,[
     			'advert_title' => 'required',
     			'description' => 'required',
@@ -31,13 +35,22 @@ class UploadController extends Controller
             'advert_title' => $request->input('advert_title'),
             'description' => $request->input('description'),
             'advert' => $request->file('advert')->getFilename(),
+            'email' => $user->email,
         ]);
 
         $file = $request->file('advert');
         $extension = $file->getClientOriginalExtension();
         Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
-        
-        // return Redirect::to('upload')->with('success', "Thank you, advert successfully uploaded.!");
+
         return redirect('/upload')->with('success', 'Advert Posted');
     } 
+
+
+    public function clientadverts(){
+
+        $adverts = User::all();
+
+        return view('/upload',compact('adverts'));
+
+    }
 }

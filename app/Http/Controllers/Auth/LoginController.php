@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Auth;
 
 
 class LoginController extends Controller
@@ -28,7 +29,18 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected function redirectTo()
+    {
+        $user = Auth::user();
+
+        if($user->roleid==0){
+            return '/home';
+        }
+        if($user->roleid==1){
+            return '/upload';
+        }
+        
+    }
 
     /**
      * Create a new controller instance.
@@ -86,5 +98,15 @@ class LoginController extends Controller
                 'error' => [trans('auth.failed')],
             ]
         );
+    }
+
+
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        if ($request->expectsJson()) {
+            return response()->json(['error' => 'Unauthenticated.'], 401);
+        }
+
+        return redirect()->guest('login');
     }
 }

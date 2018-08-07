@@ -1,13 +1,12 @@
 <?php
 
 namespace App;
-
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class Advert extends Model
+class Role extends Model
 {
-    use Notifiable;
+        use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -15,11 +14,10 @@ class Advert extends Model
      * @var array
      */
     protected $fillable = [
-        'advert_title', 'description', 'advert','email',
+        'roleid', 'name'
     ];
 
-
     public function user(){
-        return $this->belongsTo('App\User','email');
+        return $this->hasMany('App\User');
     }
 }
