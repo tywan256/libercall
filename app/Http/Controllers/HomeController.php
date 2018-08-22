@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Advert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -52,6 +53,16 @@ class HomeController extends Controller
         ]);
 
         return Redirect::to('/home')->with('success', "Thank you, your account has been credited");
+    }
+
+
+    public function viewadverts(){
+
+        $adverts = Advert::all();
+        $json = json_encode($adverts);
+
+        return view('/home',compact('json'));
+
     }
 
 }

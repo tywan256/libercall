@@ -31,16 +31,17 @@ class UploadController extends Controller
     			'advert.unique' => ' Please attach an advert.'
     		]);
 
+        $file = $request->file('advert');
+        $extension = $file->getClientOriginalExtension();
+
         Advert::create([
             'advert_title' => $request->input('advert_title'),
             'description' => $request->input('description'),
-            'advert' => $request->file('advert')->getFilename(),
+            'advert' => $request->file('advert')->getFilename().'.'.$extension,
             'email' => $user->email,
         ]);
-
-        $file = $request->file('advert');
-        $extension = $file->getClientOriginalExtension();
-        Storage::disk('local')->put($file->getFilename().'.'.$extension,  File::get($file));
+        
+        Storage::disk('public')->put($file->getFilename().'.'.$extension,  File::get($file));
 
         return redirect('/upload')->with('success', 'Advert Posted');
     } 

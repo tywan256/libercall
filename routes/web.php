@@ -33,6 +33,7 @@ Route::get('contact', 'ContactController@index')->name('contact');
 Route::group(['middleware' => ['auth']], function() {
 	Route::post('credituser', 'HomeController@credituser')->name('credituser');
 	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/home', 'HomeController@viewadverts')->name('home');
     Route::get('/upload', 'UploadController@index')->name('upload');
     Route::get('/upload', 'UploadController@clientadverts')->name('upload');
 	Route::get('/dashboard', 'DashboardController@index');

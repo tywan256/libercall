@@ -27,7 +27,7 @@
                 <div class="playpause"></div>
             </div>
             <div class="col-lg-1">
-
+                <input type="hidden" id="ads" value="{{$json}}">
             </div>
             <div class="col-lg-4">
 
